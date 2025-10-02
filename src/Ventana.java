@@ -53,7 +53,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
     }
 
 
-    void setNewScenario(Nodo nodo, String texto) {
+    void setNewStage(Nodo nodo, String texto) {
         this.nodo = nodo;
         if(!this.nodo.visitado){
             escenarios++;
@@ -96,22 +96,22 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
         aristas++;
         if (e.getSource() == botones[0]) {
             System.out.println("0");
-            setNewScenario(nodo.nodos[0], null);
+            setNewStage(nodo.nodos[0], null);
         } else if (e.getSource() == botones[1]) {
             System.out.println("1");
             if (botones[1].getText().equals("Huir"))
-                setNewScenario(nodo.nodos[1], huida);
+                setNewStage(nodo.nodos[1], huida);
             else
-                setNewScenario(nodo.nodos[1], null);
+                setNewStage(nodo.nodos[1], null);
         } else if (e.getSource() == botones[2]) {
             System.out.println("2");
             if (botones[2].getText().equals("Descender"))
-                setNewScenario(nodo.nodos[2], descenso);
+                setNewStage(nodo.nodos[2], descenso);
             else
-                setNewScenario(nodo.nodos[2], null);
+                setNewStage(nodo.nodos[2], null);
         } else {
             System.out.println("3");
-            setNewScenario(nodo.nodos[3], null);
+            setNewStage(nodo.nodos[3], null);
         }
 
     }

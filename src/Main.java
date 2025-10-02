@@ -18,7 +18,7 @@ public class Main {
         canon.nodos = new Nodo[]{null,null,null,techo1};
 //        System.out.println(gps.gameOver);
 
-        javax.swing.SwingUtilities.invokeLater(() -> new Ventana(nombre).setNewScenario(entrada,null));
+        javax.swing.SwingUtilities.invokeLater(() -> new Ventana(nombre).setNewStage(entrada,null));
 //        Ventana frame = new Ventana(nombre);
 //        frame.setNewScenario(entrada,null);
     }
