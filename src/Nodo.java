@@ -9,15 +9,6 @@ public class Nodo {
         this.ramas = ramas;
     }
 
-/*
-    public void escenario() {
-        System.out.println(formatearString(contexto));
-        for (int i = 0; i < ramas.length; i++) {
-            System.out.println((i + 1) + ". " + ramas[i]);
-        }
-    }
-*/
-
     public static String formatearString(String string) {
         char[] chars = string.toCharArray();
         int n = 66;

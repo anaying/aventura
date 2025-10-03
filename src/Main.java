@@ -16,13 +16,9 @@ public class Main {
         silla.nodos = new Nodo[]{ base,abrigo,null, mesa};
         abrigo.nodos = new Nodo[]{base,salida, null,null};
         canon.nodos = new Nodo[]{null,null,null,techo1};
-//        System.out.println(gps.gameOver);
 
         javax.swing.SwingUtilities.invokeLater(() -> new Ventana(nombre).setNewStage(entrada,null));
-//        Ventana frame = new Ventana(nombre);
-//        frame.setNewScenario(entrada,null);
     }
-
 
     private static String saludo(Scanner sc) {
         System.out.println("Bienvenido, pequeño arácnido, al aula 2 de FP/trompa. ¿Cómo te llamas?");
@@ -68,8 +64,4 @@ public class Main {
     private static final Nodo salida = new Nodo(
             "Al cabo de un tiempo indefinido, sientes que el terreno se mueve. Tras un par de sacudidas, notas que te desplazas a ritmo constante. Cuando el movimiento cesa, desciendes hasta que das con suelo firme.\n\nHa sido un día intenso, lleno de misterios y zozobras. Estás cansada y todavía no has encontrado un lugar donde tejer tu tela. Mientras reconsideras tus planes, un ente se aproxima y te espachurra contra el pavimento.\n\nAsí concluye este viaje (y todos los demás), pero tu travesía no ha sido en vano: pasarás a los anales de la historia como código fuente de dos docenas de estudiantes de DAM.",
             null);
-//    private static final String huida = "\nHuyes despavorida cual diva pillada in fraganti por los paparazzis.";
-//    private static final String descenso = "\nComienzas a segregar seda líquida mientras te cuelgas de ella. Es un hilo de gran resistencia, aunque insuficiente para soportar el peso de un elefante balanceándose (ya no digamos el de varios). ";
-
-
 }
