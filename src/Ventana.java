@@ -16,6 +16,8 @@ public class Ventana extends JFrame implements ActionListener {
 
         textArea = new JTextArea();
         textArea.setPreferredSize(new Dimension(400, 400));
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
         textArea.setFocusable(false);
         getContentPane().add(textArea, BorderLayout.CENTER);
 
@@ -46,13 +48,13 @@ public class Ventana extends JFrame implements ActionListener {
             this.nodo.visitado = true;
         }
         if (texto == null)
-            textArea.setText(Nodo.formatearString(nodo.contexto));
+            textArea.setText(nodo.contexto);
         else
-            textArea.setText(Nodo.formatearString(texto) + Nodo.formatearString(nodo.contexto));
+            textArea.setText(texto + nodo.contexto);
         if (nodo.ramas == null) {
-            for (JButton botone : botones) {
-                botone.setText("");
-                botone.setEnabled(false);
+            for (JButton jButton : botones) {
+                jButton.setText("");
+                jButton.setEnabled(false);
             }
             textArea.setText(textArea.getText() + "\n\n\n\tNombre: " + nombre + "\n\tEscenarios visitados: " + escenarios + "\n\tAristas recorridas: " + aristas);
             stats(nombre, escenarios, aristas);
@@ -105,7 +107,6 @@ public class Ventana extends JFrame implements ActionListener {
         System.out.println("\n\tNombre: " + nombre + "\n\tEscenarios visitados: " + escenarios + "\n\tAristas recorridas: " + aristas);
     }
 
-    private static final String descenso = "\nComienzas a segregar seda líquida mientras te cuelgas de ella. Es un hilo de gran resistencia, aunque insuficiente para soportar el peso de un elefante balanceándose (ya no digamos el de varios). ";
-    private static final String huida = "\nHuyes despavorida cual diva pillada in fraganti por los paparazzis.";
-
+    private static final String descenso = "\nComienzas a segregar seda líquida mientras te cuelgas de ella. Es un hilo de gran resistencia, aunque insuficiente para soportar el peso de un elefante balanceándose (ya no digamos el de varios).\n\n";
+    private static final String huida = "\nHuyes despavorida cual diva pillada in fraganti por los paparazzis.\n\n";
 }

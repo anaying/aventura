@@ -8,18 +8,4 @@ public class Nodo {
         this.contexto = contexto;
         this.ramas = ramas;
     }
-
-    public static String formatearString(String string) {
-        char[] chars = string.toCharArray();
-        int n = 66;
-        StringBuilder s = new StringBuilder();
-        for (int i = 0, salto = 0; i < string.length(); i++, salto++) {
-            if (salto % n == 0)
-                s.append("\n");
-            if (chars[i] == '\n')
-                salto = 0;
-            s.append(chars[i]);
-        }
-        return s +"\n";
-    }
 }
